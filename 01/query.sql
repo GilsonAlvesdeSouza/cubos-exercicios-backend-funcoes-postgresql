@@ -13,7 +13,7 @@ select max(idade) as maior_idade from usuarios;
 select round(avg(idade), 2) as media_idade_maior_que_18 from usuarios where idade >= 18; 
 
 --05
-select categoria, count(estoque) as quantidade_estoque from farmacia  where categoria = 'blue' or categoria = 'black' GROUP by categoria;
+select categoria, sum(estoque) as quantidade_estoque from farmacia  where categoria = 'blue' or categoria = 'black' GROUP by categoria;
 
 --06
 select categoria, sum(estoque) as soma_estoque from farmacia where categoria notnull group by categoria;
